@@ -25,10 +25,10 @@ export default {
     AppHeader,
     AppFooter,
     TmCookieConsent,
-    TmModalError
+    TmModalError,
   },
   computed: {
-    ...mapGetters(["nodes"])
+    ...mapGetters(["nodes"]),
   },
   mounted() {
     this.$store.dispatch("getLastBlock")
@@ -39,12 +39,31 @@ export default {
     this.$store.dispatch("getNodes")
     this.$store.dispatch("getValidators")
   },
-  store
+  store,
 }
 </script>
 
 <style lang="stylus" src="./styles/app.styl"></style>
 <style lang="stylus">
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap')
+  @font-face {
+    font-family: './assets/fonts/Helvetica Neue LT Pro';
+    src: url('./assets/fonts/HelveticaNeueLTPro-Cn.woff2') format('woff2'),
+        url('./assets/fonts/HelveticaNeueLTPro-Cn.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: './assets/fonts/Helvetica Neue LT Pro';
+    src: url('./assets/fonts/HelveticaNeueLTPro-BdCn.woff2') format('woff2'),
+        url('./assets/fonts/HelveticaNeueLTPro-BdCn.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
   .tm-part
     max-width 100%
   .tm-part-main

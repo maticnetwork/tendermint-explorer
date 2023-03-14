@@ -61,10 +61,10 @@ export default {
 <style lang="stylus">
 // @require '../styles/variables.styl'
 @import '~variables'
-
 .LogoType
   font-size 23px
   font-weight bold
+  color: var(--app-rddl-green)
 
 @media screen and (max-width: 1023px)
   #app-header
